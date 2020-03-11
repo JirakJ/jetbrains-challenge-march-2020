@@ -7,6 +7,10 @@ public class Main {
     public static void main(String[] args) {
 	    // write your code here
         String code = "48 61 76 65 20 79 6f 75 20 73 65 65 6e 20 74 68 65 20 73 6f 75 72 63 65 20 63 6f 64 65 20 6f 66 20 74 68 65 20 4a 65 74 42 72 61 69 6e 73 20 77 65 62 73 69 74 65 3f";
+        System.out.println("I found out these lines on Linked In post.");
+        System.out.println("JetBrains Quest begins… #JetBrainsQuest");
+        System.out.println(code);
+
         decodeIntegerToAscii(code);
 
         printClueFromWebsite();
@@ -103,9 +107,12 @@ public class Main {
     }
 
     public static void decodeIntegerToAscii(String code){
+        System.out.println();
+        System.out.println("Decoded text:");
         Arrays.stream(code.split(" "))
                 .map((s) -> (char)Integer.decode("0x" + s).intValue())
                 .forEach(System.out::print);
+        System.out.println();
     }
 
     public static String encrypt (String srcString, int shift)
